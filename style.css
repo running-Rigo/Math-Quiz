@@ -1,0 +1,113 @@
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(lightyellow,darkorange,darkorchid);
+    height: 100vh;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main{
+    width: 80vw;
+}
+
+#greeting-game-field h1{
+    font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+    grid-row-start: 2;
+    grid-column: span 3;
+}
+
+.game-field{
+    aspect-ratio: 1/1;
+    width: 50vw;
+    max-width: 50vh;
+    background-color: lightblue;
+    box-shadow: 0 0 20px lightblue;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#playing-game-field div{
+    background-image: url("img/cloud.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(20px + 6 * ((100vw - 320px) / 680))
+}
+
+.active{
+    box-shadow: 0 0 10px slateblue;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: slateblue;
+    background-blend-mode: color-burn;
+    text-shadow: 5px 5px darkorange;
+}
+
+button{
+    padding: 8px 16px;
+    width: 200px;
+    font-size: large;
+    margin-top: 20px;
+}
+
+#interaction-container input{
+    width: 200px;
+    max-with: 90vw;
+    min-height: 30px;
+    font-size: 100%;
+}
+
+
+#place-for-img{
+    margin-top:20%;
+    height: 50%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.angel-emoji{
+    background-image: url("img/angel-emoji.png");
+}
+.loser-img{
+    background-image: url("img/loser.png");
+}
+.winner-img{
+    background-image: url("img/winner.jpg");
+}
+
+
+.invisible{
+    display: none;
+}
+
+#playing-game-field{
+    display: none;
+    grid-gap: 15px;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+}
+
+.transform-loading{
+    margin: 1%;
+    animation: mymove 1.5s both;
+}
+
+@keyframes mymove {
+    from {font-size: 20px}
+    to {font-size: 30px}
+}
+
+h3{
+    font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+}
+
+
+
